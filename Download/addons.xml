@@ -16,7 +16,7 @@
 
 <addon
   id="skin.rkodiconfluence"
-  version="1.0.0"
+  version="1.0.1"
   name="rKodiConfluence (Jarvis)"
   provider-name="Jezz_X, Team Kodi, elmerohueso, dregov">
   <requires>
