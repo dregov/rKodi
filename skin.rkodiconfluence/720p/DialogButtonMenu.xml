@@ -98,7 +98,7 @@
 				<texturenofocus border="25,5,25,5">ShutdownButtonNoFocus.png</texturenofocus>
 				<onclick condition="!System.Platform.Android">Powerdown()</onclick>
 				<onclick condition="System.Platform.Android">XBMC.RunScript(special://skin/resources/lib/androidpower.py, shutdown)</onclick>
-				<visible>System.CanPowerDown | [System.Platform.Android + Skin.HasSetting(HasRoot)]</visible>
+				<visible>System.CanPowerDown | [System.Platform.Android + !Skin.HasSetting(HasRoot)]</visible>
 				<pulseonselect>no</pulseonselect>
 				<font>font13</font>
 				<label>13016</label>
@@ -150,7 +150,7 @@
 				<texturenofocus border="25,5,25,5">ShutdownButtonNoFocus.png</texturenofocus>
 				<onclick condition="!System.Platform.Android">Suspend()</onclick>
 				<onclick condition="System.Platform.Android">XBMC.RunScript(special://skin/resources/lib/androidpower.py, sleep)</onclick>
-				<visible>System.CanSuspend | [System.Platform.Android + Skin.HasSetting(HasRoot)]</visible>
+				<visible>System.CanSuspend | [System.Platform.Android + !Skin.HasSetting(HasRoot)]</visible>
 				<pulseonselect>no</pulseonselect>
 				<font>font13</font>
 				<label>13011</label>
@@ -185,7 +185,7 @@
 				<texturenofocus border="25,5,25,5">ShutdownButtonNoFocus.png</texturenofocus>
 				<onclick condition="!System.Platform.Android">Reset()</onclick>
 				<onclick condition="System.Platform.Android">XBMC.RunScript(special://skin/resources/lib/androidpower.py, reboot)</onclick>
-				<visible>System.CanReboot | [System.Platform.Android + Skin.HasSetting(HasRoot)]</visible>
+				<visible>System.CanReboot | [System.Platform.Android + !Skin.HasSetting(HasRoot)]</visible>
 				<pulseonselect>no</pulseonselect>
 				<font>font13</font>
 				<label>13013</label>

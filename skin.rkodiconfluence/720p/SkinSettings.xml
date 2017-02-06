@@ -344,7 +344,7 @@
 						<font>font13</font>
 						<label>Kodi has SU permissions</label>
 						<textcolor>grey2</textcolor>
-						<visible>System.Platform.Android + Skin.HasSetting(HasRoot)</visible>
+						<visible>System.Platform.Android + !Skin.HasSetting(HasRoot)</visible>
 					</control>
 				</control>
 				<control type="scrollbar" id="60">
@@ -1331,7 +1331,7 @@
 							<selected>!Skin.HasSetting(1PowerDoesntLogOff)</selected>
 						</control>
 						<control type="label" id="90006">
-							<visible>System.CanReboot | System.CanPowerDown | System.CanSuspend | System.CanHibernate | [System.Platform.Android + Skin.HasSetting(HasRoot)]</visible>
+							<visible>System.CanReboot | System.CanPowerDown | System.CanSuspend | System.CanHibernate | [System.Platform.Android + !Skin.HasSetting(HasRoot)]</visible>
 							<width>750</width>
 							<height>45</height>
 							<font>font13_title</font>
@@ -1342,7 +1342,7 @@
 							<aligny>center</aligny>
 						</control>																			
 						<control type="radiobutton" id="90008">
-							<visible>System.CanPowerDown | [System.Platform.Android + Skin.HasSetting(HasRoot)]</visible>
+							<visible>System.CanPowerDown | [System.Platform.Android + !Skin.HasSetting(HasRoot)]</visible>
 							<enable>Skin.HasSetting(1EnableShutdownMenu)</enable>
 							<width>750</width>
 							<height>40</height>
@@ -1398,7 +1398,7 @@
 							<selected>!Skin.HasSetting(1DisableHibernateButton)</selected>
 						</control>										
 						<control type="radiobutton" id="900012">
-							<visible>System.CanReboot | [System.Platform.Android + Skin.HasSetting(HasRoot)]</visible>
+							<visible>System.CanReboot | [System.Platform.Android + !Skin.HasSetting(HasRoot)]</visible>
 							<enable>Skin.HasSetting(1EnableShutdownMenu)</enable>
 							<width>750</width>
 							<height>40</height>
