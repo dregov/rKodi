@@ -1,8 +1,12 @@
 [B]1.0.1[/B]
 
+- fix script androidpower.py
+- fix menu helper on first run
+- change icon.png to rKodi Confluence
 - auto enabled skin has root
 - add color scheme classic
 - fix small bugs
+- update changelog
 
 [B]1.0.0[/B]
 
