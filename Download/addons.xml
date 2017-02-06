@@ -1,6 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <addons>
-
 <addon
   id="skin.rkodiconfluence"
   version="1.0.1"
@@ -208,7 +207,5 @@
         <description>rKodi dregov Repository</description>
         <platform>all</platform>
     </extension>
-	
 </addon>
-
 </addons>
