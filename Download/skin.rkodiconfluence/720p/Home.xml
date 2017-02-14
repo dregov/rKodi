@@ -1129,12 +1129,12 @@
 				<height>45</height>
 				<label>31003</label>
 				<font>-</font>
-				<onclick condition="!Skin.HasSetting(1PowerDoesntLogOff)">System.LogOff</onclick>
-				<onclick condition="Skin.HasSetting(1EnableShutdownMenu)">ActivateWindow(ShutdownMenu)</onclick>
+				<onclick condition="Skin.HasSetting(1PowerDoesntLogOff)">System.LogOff</onclick>
+				<onclick condition="!Skin.HasSetting(1EnableShutdownMenu)">ActivateWindow(ShutdownMenu)</onclick>
 				<texturefocus border="5">floor_buttonFO.png</texturefocus>
 				<texturenofocus border="5">floor_button.png</texturenofocus>
-				<onleft condition="Skin.HasSetting(ShowFavoritesButton)">21</onleft>
-				<onright condition="Skin.HasSetting(ShowFavoritesButton)">21</onright>
+				<onleft condition="!Skin.HasSetting(ShowFavoritesButton)">21</onleft>
+				<onright condition="!Skin.HasSetting(ShowFavoritesButton)">21</onright>
 				<onup>9002</onup>
 				<ondown>9003</ondown>
 				<visible>!Skin.HasSetting(HidePowerButton)</visible>
@@ -1153,7 +1153,7 @@
 			</control>
 			<control type="button" id="21">
 				<animation effect="slide" start="0,0" end="55,0" time="0" condition="!Skin.HasSetting(HidePowerButton)">conditional</animation>
-				<visible>Skin.HasSetting(ShowFavoritesButton)</visible>
+				<visible>!Skin.HasSetting(ShowFavoritesButton)</visible>
 				<description>Favourites push button</description>
 				<left>0</left>
 				<top>0</top>
@@ -1171,7 +1171,7 @@
 			</control>
 			<control type="image">
 				<animation effect="slide" start="0,0" end="55,0" time="0" condition="!Skin.HasSetting(HidePowerButton)">conditional</animation>
-				<visible>Skin.HasSetting(ShowFavoritesButton)</visible>
+				<visible>!Skin.HasSetting(ShowFavoritesButton)</visible>
 				<description>Favourites Icon</description>
 				<left>5</left>
 				<top>5</top>

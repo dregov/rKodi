@@ -1,4 +1,12 @@
-[B]1.0.1[/B]
+[B]ver 1.1.0 - 14.02.2017[/B]
+
+- fix script androidpower.py
+- fix menu shutdown - add bootloader, recovery cwm ...
+- fix permissions skin for rKodi
+- power menu and favourites show default
+- fix changelog
+
+[B]ver 1.0.1 - 06.02.2017[/B]
 
 - fix script androidpower.py
 - fix menu helper on first run
@@ -8,7 +16,7 @@
 - fix small bugs
 - update changelog
 
-[B]1.0.0[/B]
+[B]ver 1.0.0 - 31.01.2017[/B]
 
 - fork skin Confluence++ (Helix) elmerohueso by dregov
 - skin ported with rKodi(Jarvis) Confluence ver. 2.8.8

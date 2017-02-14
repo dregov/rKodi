@@ -315,7 +315,7 @@
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<enable>Skin.HasSetting(Use_Startup_Playlist)</enable>
 					</control>
-					<control type="label" id="109">
+					<!--<control type="label" id="109">
 						<width>750</width>
 						<height>45</height>
 						<font>font13_title</font>
@@ -345,7 +345,7 @@
 						<label>Kodi has SU permissions</label>
 						<textcolor>grey2</textcolor>
 						<visible>System.Platform.Android + !Skin.HasSetting(HasRoot)</visible>
-					</control>
+					</control> -->
 				</control>
 				<control type="scrollbar" id="60">
 					<left>1060</left>
@@ -409,7 +409,7 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<onclick>Skin.ToggleSetting(ShowFavoritesButton)</onclick>
-						<selected>Skin.HasSetting(ShowFavoritesButton)</selected>
+						<selected>!Skin.HasSetting(ShowFavoritesButton)</selected>
 					</control>
 					<control type="radiobutton" id="202">
 						<description>enable video info</description>
@@ -1314,21 +1314,21 @@
 							<texturenofocus>MenuItemNF.png</texturenofocus>
 							<onclick>Skin.ToggleSetting(1EnableShutdownMenu)</onclick>
 							<onclick>Skin.ToggleSetting(1PowerDoesntLogOff)</onclick>
-							<selected>Skin.HasSetting(1EnableShutdownMenu)</selected>
+							<selected>!Skin.HasSetting(1EnableShutdownMenu)</selected>
 						</control>
 						<control type="radiobutton" id="90005">
 							<description>Power button shows shutdown menu</description>
 							<width>750</width>
 							<height>40</height>
 							<font>font13</font>
-							<label>Logoff Kodi Profile</label>
+							<label>Logoff rKodi Profile</label>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
 							<texturenofocus>MenuItemNF.png</texturenofocus>
 							<onclick>Skin.ToggleSetting(1PowerDoesntLogOff)</onclick>
 							<onclick>Skin.ToggleSetting(1EnableShutdownMenu)</onclick>
-							<selected>!Skin.HasSetting(1PowerDoesntLogOff)</selected>
+							<selected>Skin.HasSetting(1PowerDoesntLogOff)</selected>
 						</control>
 						<control type="label" id="90006">
 							<visible>System.CanReboot | System.CanPowerDown | System.CanSuspend | System.CanHibernate | [System.Platform.Android + !Skin.HasSetting(HasRoot)]</visible>
@@ -1341,23 +1341,9 @@
 							<align>left</align>
 							<aligny>center</aligny>
 						</control>																			
-						<control type="radiobutton" id="90008">
-							<visible>System.CanPowerDown | [System.Platform.Android + !Skin.HasSetting(HasRoot)]</visible>
-							<enable>Skin.HasSetting(1EnableShutdownMenu)</enable>
-							<width>750</width>
-							<height>40</height>
-							<font>font13</font>
-							<label>Show "$LOCALIZE[13016]"</label>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>MenuItemFO.png</texturefocus>
-							<texturenofocus>MenuItemNF.png</texturenofocus>
-							<onclick>Skin.ToggleSetting(1DisableShutdownButton)</onclick>
-							<selected>!Skin.HasSetting(1DisableShutdownButton)</selected>
-						</control>										
 						<control type="radiobutton" id="90009">
 							<visible>System.CanPowerDown | System.CanSuspend | System.CanHibernate</visible>
-							<enable>Skin.HasSetting(1EnableShutdownMenu)</enable>
+							<enable>!Skin.HasSetting(1EnableShutdownMenu)</enable>
 							<width>750</width>
 							<height>40</height>
 							<font>font13</font>
@@ -1371,7 +1357,7 @@
 						</control>										
 						<control type="radiobutton" id="90010">
 							<visible>System.CanSuspend | [System.Platform.Android + Skin.HasSetting(HasRoot)]</visible>
-							<enable>Skin.HasSetting(1EnableShutdownMenu)</enable>
+							<enable>!Skin.HasSetting(1EnableShutdownMenu)</enable>
 							<width>750</width>
 							<height>40</height>
 							<font>font13</font>
@@ -1385,7 +1371,7 @@
 						</control>										
 						<control type="radiobutton" id="900011">
 							<visible>System.CanHibernate</visible>
-							<enable>Skin.HasSetting(1EnableShutdownMenu)</enable>
+							<enable>!Skin.HasSetting(1EnableShutdownMenu)</enable>
 							<width>750</width>
 							<height>40</height>
 							<font>font13</font>
@@ -1399,7 +1385,7 @@
 						</control>										
 						<control type="radiobutton" id="900012">
 							<visible>System.CanReboot | [System.Platform.Android + !Skin.HasSetting(HasRoot)]</visible>
-							<enable>Skin.HasSetting(1EnableShutdownMenu)</enable>
+							<enable>!Skin.HasSetting(1EnableShutdownMenu)</enable>
 							<width>750</width>
 							<height>40</height>
 							<font>font13</font>
@@ -1410,7 +1396,21 @@
 							<texturenofocus>MenuItemNF.png</texturenofocus>
 							<onclick>Skin.ToggleSetting(1DisableRebootButton)</onclick>
 							<selected>!Skin.HasSetting(1DisableRebootButton)</selected>
-						</control>					
+						</control>
+						<control type="radiobutton" id="90008">
+							<visible>System.CanPowerDown | [System.Platform.Android + !Skin.HasSetting(HasRoot)]</visible>
+							<enable>!Skin.HasSetting(1EnableShutdownMenu)</enable>
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<label>Show "$LOCALIZE[21479] CWM"</label>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<onclick>Skin.ToggleSetting(1DisableShutdownButton)</onclick>
+							<selected>!Skin.HasSetting(1DisableShutdownButton)</selected>
+						</control>	
 					</control>
 				</control>
 				<control type="scrollbar" id="61">

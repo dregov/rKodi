@@ -83,27 +83,10 @@
 				<onclick>Quit()</onclick>
 				<pulseonselect>no</pulseonselect>
 				<font>font13</font>
-				<label>13012</label>
+				<label>20183</label>
 				<visible>System.ShowExitButton</visible>
 			</control>
-			<control type="button" id="3">
-				<description>Shutdown button</description>
-				<width>340</width>
-				<height>40</height>
-				<textcolor>grey2</textcolor>
-				<focusedcolor>white</focusedcolor>
-				<align>center</align>
-				<textwidth>290</textwidth>
-				<texturefocus border="25,5,25,5">ShutdownButtonFocus.png</texturefocus>
-				<texturenofocus border="25,5,25,5">ShutdownButtonNoFocus.png</texturenofocus>
-				<onclick condition="!System.Platform.Android">Powerdown()</onclick>
-				<onclick condition="System.Platform.Android">XBMC.RunScript(special://skin/resources/lib/androidpower.py, shutdown)</onclick>
-				<visible>System.CanPowerDown | [System.Platform.Android + !Skin.HasSetting(HasRoot)]</visible>
-				<pulseonselect>no</pulseonselect>
-				<font>font13</font>
-				<label>13016</label>
-				<visible>!Skin.HasSetting(1DisableShutdownButton)</visible>
-			</control>
+			
 			<control type="button" id="4">
 				<description>Custom Shutdown Timer</description>
 				<width>340</width>
@@ -190,6 +173,43 @@
 				<font>font13</font>
 				<label>13013</label>
 				<visible>!Skin.HasSetting(1DisableRebootButton)</visible>
+			</control>
+			<control type="button" id="99">
+				<description>Bootloader button</description>
+				<width>340</width>
+				<height>40</height>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<align>center</align>
+				<textwidth>290</textwidth>
+				<texturefocus border="25,5,25,5">ShutdownButtonFocus.png</texturefocus>
+				<texturenofocus border="25,5,25,5">ShutdownButtonNoFocus.png</texturenofocus>
+				<onclick condition="!System.Platform.Android">Reset()</onclick>
+				<onclick condition="System.Platform.Android">XBMC.RunScript(special://skin/resources/lib/androidpower.py, bootloader)</onclick>
+				<visible>System.CanReboot | [System.Platform.Android + !Skin.HasSetting(HasRoot)]</visible>
+				<pulseonselect>no</pulseonselect>
+				<font>font13</font>
+				<label>$LOCALIZE[21479] bootloader</label>
+				<visible>!Skin.HasSetting(1DisableRebootButton)</visible>
+			</control>
+			<control type="button" id="3">
+				<description>Shutdown button</description>
+				<width>340</width>
+				<height>40</height>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<align>center</align>
+				<textwidth>290</textwidth>
+				<texturefocus border="25,5,25,5">ShutdownButtonFocus.png</texturefocus>
+				<texturenofocus border="25,5,25,5">ShutdownButtonNoFocus.png</texturenofocus>
+				<onclick condition="!System.Platform.Android">Powerdown()</onclick>
+				<onclick condition="System.Platform.Android">XBMC.RunScript(special://skin/resources/lib/androidpower.py, shutdown)</onclick>
+				<visible>System.CanPowerDown | [System.Platform.Android + !Skin.HasSetting(HasRoot)]</visible>
+				<pulseonselect>no</pulseonselect>
+				<font>font13</font>
+				<label>$LOCALIZE[21479] CWM</label>
+				<!--<label>13016</label>-->
+				<visible>!Skin.HasSetting(1DisableShutdownButton)</visible>
 			</control>
 			<control type="button" id="9">
 				<description>Logoff button</description>
